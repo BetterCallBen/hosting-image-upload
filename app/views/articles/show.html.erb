@@ -1,6 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
+<% @article.photos.each do |photo| %>
+  <%= cl_image_tag(photo.key, width: 300) %>
+<% end %>
+
 <%= render @article %>
+
+
 
 <div>
   <%= link_to "Edit this article", edit_article_path(@article) %> |
